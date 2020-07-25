@@ -1,0 +1,64 @@
+@import "./common/all.css";
+@import "./common/header.css";
+@import "./common/footer.css";
+
+
+
+div.main_container{
+  /* border: 1px solid red; */
+  width:100%;
+}
+div.ticketlist, div.ticket, div.needtoknow{
+  width: 90%;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: rgba(15, 15, 15, 0.5);
+  background-image: linear-gradient( to bottom, rgba(15, 15, 15, 0), rgba(40, 0, 0, 0.2));
+  box-shadow: 2px 2px 10px rgba(126, 5, 5, 0.5);
+  padding: 20px;
+  border-radius: 2px;
+}
+div.ticketlist h2, div.ticket h2, div.needtoknow h2{
+  color:#dfdfdf;
+}
+
+
+
+@media screen and (min-width: 767px){
+  div.main_container{
+  width:80%;
+  margin: 20px auto;
+  }
+  div.ticket_block{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  }
+  div.ticketlist{
+    width: 100%;
+    margin: 20px;
+  }
+  div.ticket, div.needtoknow{
+    width: 30%;
+    margin: 20px;
+  }
+}
+@media screen and (min-width: 1200px){
+  div.main_container{
+    width: 1200px;
+    margin: auto;
+  }
+  div.ticket_block{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    }
+  div.ticketlist{
+    width: 100%;
+    margin: 50px 20px;
+  }
+  div.ticket, div.needtoknow{
+    width: 30%;
+    margin: 20px;
+  }
+}

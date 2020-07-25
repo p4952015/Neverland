@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+  <html lang="zh-hant">
+    <head>
+      <meta charset="utf-8">
+      <!--    讓網頁不會自動因手機螢幕變小而扭曲，使得RWD網頁能正常執行-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+      <title>NEWS</title>
+      <link rel="shortcut icon" href="./images/logoicon.ico" type="image/x-icon" / >
+      <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="./css/newsinfo.css">
+    </head>
+    <body>
+ 
+        
+        <header class="header">
+          <div class="nav_phone">
+            <a href="./index.html" id="homelogo"></a>
+            <button class="hamburger hamburger--squeeze" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+          <nav class="main_nav">
+            <ul class="nav_list">
+              <li><a href="./index.html" class="logo"></a></li>
+              <li><a href="./programs.html" class="nav_PROGRAM">PROGRAMS</a></li>
+              <li><a href="./news.html" class="nav_NEWS" style="color:#b71c1c">NEWS</a></li>
+              <li><a href="./ticket.html" class="nav_TICKET">TICKET</a></li>
+              <li><a href="./about.html" class="nav_ABOUT">ABOUT</a></li>
+              <li><a href="./contact.html" class="nav_CONTACT">CONTACT</a></li>
+              <li>
+              <div class="social_media">
+                <form class="searchbar">
+                  <input class="search" type="text" placeholder="search...">
+                </form>
+                <a href="#"><img id="fb" src="./images/iconfb.png"></a>
+                <a href="#"><img id="ig" src="./images/iconig.png"></a>
+              </div>
+              </li>
+            </ul>
+          </nav>
+        </header>
+
+      <div class="main_contain">
+        <div >
+          <div class="news_info">
+          <h2 style="margin: 20px;">2020.02.01 防疫公告</h2>
+          <img src="./images/latestnews1.jpg">
+          <p>&nbsp</p>
+            <p>因應「嚴重特殊傳染性肺炎（武漢肺炎）」防疫執行措施</p>
+            <p>&nbsp</p>
+            <p>為減少民眾可能被「嚴重特殊傳染性肺炎（武漢肺炎）」感染或成為傳染源之機率，即日起將實施下列措施，以保障到訪場館民眾之健康。</p>
+            <p>&nbsp</p>
+            <p>📌場館工作人員執勤時均配戴口罩。</p>
+            <p>&nbsp</p>
+            <p>📌購票至場館參加演出活動之觀眾，須配合下列事項才可進場：</p>
+            <br>
+            <p>&nbsp&nbsp1.於LIVE WAREHOUSE玻璃大門前進行撕驗票。</p>
+            <p>&nbsp&nbsp2.於LIVE WAREHOUSE玻璃大門前量測體溫。</p>
+            <p>&nbsp&nbsp3.於LIVE WAREHOUSE玻璃大門前進行酒精消毒。</p>
+            <p>&nbsp&nbsp4.自備口罩配戴入場，並於演出全程皆需配戴。</p>
+            <p>&nbsp</p>
+            <p>&nbsp📌有發燒症狀之觀眾（額溫大於37℃、耳溫大於38℃）不得入場，場館會協助辦理退票。</p>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+      COPYRIGHT &copy; 2020 NEVERLAND ALL RIGHT RESERVED
+      </footer>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+      <!-- 漢堡包 -->
+      <script>
+        $(function(){
+          // 點擊按鈕，選單縮放
+          $("button.hamburger").on("click", function(){
+            $("nav.main_nav").slideToggle(100);
+            $(this).toggleClass("is-active");
+          });
+        });
+      </script>
+    </body>
+  </html>
