@@ -1,0 +1,63 @@
+@import "./common/all.css";
+@import "./common/header.css";
+@import "./common/footer.css";
+
+
+
+div.main_contain{
+  /* border:1px solid red; */
+  width:100%;
+
+}
+div.news_info{
+  /* border:1px solid blue; */
+  width: 1000px;
+  margin: auto;
+  padding: 50px; 
+}
+img{
+  width: 800px;
+}
+@media screen and (max-width:575px){
+  div.news_info{
+    max-width: 100%;
+  }
+  img{
+    width: 100%;
+  }
+}
+@media (min-width:576px) and (max-width: 767px){
+  div.news_info{
+    max-width: 100%;
+  }
+  img{
+    width: 100%;
+  }
+}
+@media screen and (max-width:1200px){
+  div.news_info{
+    max-width: 100%;
+  }
+  img{
+    max-width: 100%;
+  }
+}
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+

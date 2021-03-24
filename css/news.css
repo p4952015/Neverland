@@ -1,0 +1,101 @@
+@import "./common/all.css";
+@import "./common/header.css";
+@import "./common/footer.css";
+
+
+div.news{
+  background-color: rgb(15, 15, 15);
+  /* background-image: linear-gradient( to bottom, rgba( 1, 225, 225, 0), rgba(1, 225, 225, .1)); */
+  width: 350px;
+  height: 270px;
+  margin: 20px auto;
+  display: block;
+  overflow: hidden;
+}
+div.news:hover{
+  background-color: rgba(75, 75, 75);
+}
+div.img{
+  transition: all 1s ease-out;
+}
+img{
+  width: 350px;
+  height: 200px;
+  margin: 0, auto;
+}
+div.news div.img:hover{
+  transform: scale(1.1,1.1);
+}
+div.news a{
+  color:#b7b7b7;
+  text-decoration: none;
+}
+div.news div.title{
+  width: 350px;
+  height: 50px;
+  display: flex;
+  margin-top: 5px;
+  padding: 5px;
+  }
+span.left{
+  width: 70px;
+  text-align: center;
+}
+
+span.date{
+   font-size: 20px;
+}
+span.month{
+  font-size: 10px;
+  display: block;
+}
+span.main_title{
+  font-size: 16px;
+  line-height: 25px;
+  flex: 1;
+  border-left: 1px solid #484848;
+  padding-left: 10px;
+}
+div.pagination{
+  height:50px;
+  margin-top:50px;
+  text-align: center;
+  line-height: 50px;
+}
+div.pagination a{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 5px 10px;
+}
+div.pagination a:hover{
+  background-color: #c41d1d;
+}
+div.pagination a.active{
+  background-color: #c41d1d;
+}
+
+@media (min-width:768px) and (max-width:1199px){
+  div.news_container{
+    max-width:768px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  div#news9{
+    display:none;
+  }
+}  
+@media screen and (min-width:1200px){
+  div.main_container{
+    width: 100%;
+  }
+  div.news_container{
+    width:1200px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}

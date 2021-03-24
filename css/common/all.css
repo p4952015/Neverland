@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+}
+body{
+  margin: 0 auto;
+  font-family: 'Rajdhani',Arial, Helvetica,"Microsoft JhengHei","Noto Sans",sans-serif;
+  font-size: 100%;
+  color: rgb(200, 200, 200);
+  background: linear-gradient(to bottom,#000,#000 50%,#222 50%,#222);
+  background-size: 100% 4px;
+  animation: Move 500ms ease infinite;
+}
+@keyframes Move {
+    0%{
+      background-size: 100% 4px
+    }
+    50%{
+      background-size: 100% 2px
+    }
+    100%{
+      background-size: 100% 4px
+    }
+}

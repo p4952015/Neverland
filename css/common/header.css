@@ -1,0 +1,200 @@
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+ .hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; }
+  .hamburger:hover {
+    opacity: 0.7; }
+  .hamburger.is-active:hover {
+    opacity: 0.7; }
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner::before,
+  .hamburger.is-active .hamburger-inner::after {
+    background-color: rgb(255, 255, 255); }
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 30px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+  .hamburger-inner::before {
+    top: -10px; }
+  .hamburger-inner::after {
+    bottom: -10px; }
+
+/*Squeeze */
+   .hamburger--squeeze .hamburger-inner {
+    transition-duration: 0.075s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+    .hamburger--squeeze .hamburger-inner::before {
+      transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
+    .hamburger--squeeze .hamburger-inner::after {
+      transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  
+  .hamburger--squeeze.is-active .hamburger-inner {
+    transform: rotate(45deg);
+    transition-delay: 0.12s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+    .hamburger--squeeze.is-active .hamburger-inner::before {
+      top: 0;
+      opacity: 0;
+      transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+    .hamburger--squeeze.is-active .hamburger-inner::after {
+      bottom: 0;
+      transform: rotate(-90deg);
+      transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+  
+
+div.nav_phone{
+  display: flex;
+  justify-content: space-between;
+}
+#homelogo{
+  width: 200px;
+  height: 80px;
+  margin:0 20px;
+  background-image: url("../../images/Logo.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+  header.header{
+    width:100%;
+    height:80px;
+    background-color: black;
+    opacity: .9;
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
+    z-index: 9;
+  }
+  nav.main_nav ul.nav_list{
+    width: 100%;
+    height: 80px;
+    font-size: 0;
+    padding: 0;
+  }
+  header.header a.logo{
+    /* border:1px solid red; */
+    width: 250px;
+    height: 80px;
+    margin: 0 20px !important;
+    background-image: url("../../images/Logo.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  nav.main_nav ul.nav_list > li{
+    border: 1px solid transparent;
+    text-align: center;
+    background-color: black;
+  }
+  nav.main_nav ul.nav_list > li >a:hover{
+    color: #b71c1c;
+  }
+  nav.main_nav ul.nav_list > li > a{
+    font-size: 21px;
+    color: #dedede;
+    text-shadow: 5px 5px 20px white;
+    text-decoration: none;
+    margin: 20px;
+    display: block;
+    padding: 5px;
+  }
+  div.social_media{
+    /* border: 1px solid green; */
+    width: 200px;
+    height:80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+  }
+ #fb, #ig{
+    width: 20px;
+    height: 20px;
+    margin:5px;
+    margin-top: 25px;
+  }
+  div.social_media form.searchbar{
+    width: 100px;
+    height: 20px;
+    margin:5px;
+    margin-top: 25px;
+  }
+  input.search{
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 100px;
+    height: 20px;
+    background-image: url("https://alldata.sgp1.digitaloceanspaces.com/images/searchicon.png");
+    background-size: 15px;
+    background-position: 2px 2px;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    }
+ 
+
+  /* 行動版時，調整列表樣式 */
+@media screen and (max-width: 1099px){
+  /* 行動版時，將按鈕顯示出來 */
+  div.test ,button.hamburger, #homelogo{
+    display: inline-block;
+  }
+  ul.nav_ > li{
+    display: block;
+  }
+  nav.main_nav{
+    display: none;
+  }
+  a.logo{
+    display: none !important;
+  }
+}
+@media screen and (min-width: 1100px){
+    button.hamburger, #homelogo{
+      display: none;
+    }
+    nav.main_nav{
+      width: 100%;
+      display: flex !important;
+    }
+    ul.nav_list{
+      width: 100%;
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+    }
+}
